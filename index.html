@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>R - Baileys</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            function toggleTheme() {
+                const html = document.querySelector('html');
+                if (html.classList.contains('dark')) {
+                    html.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    html.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', ()=>{
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.querySelector('html').classList.add('dark');
+                }
+            }
+            );
+        </script>
+    </head>
+    <body class="bg-cover bg-center font-sans text-white dark:bg-black dark:text-gray-300" style="background-image: url('https://files.catbox.moe/8a686n.jpeg');">
+        <header class="flex justify-between items-center px-6 py-4 bg-blue-700 bg-opacity-75 dark:bg-gray-800">
+            <div class="flex items-center">
+                <img src="https://files.catbox.moe/8a686n.jpeg" alt="Baileys Logo" class="w-8 h-8 mr-2">
+                <span class="text-xl font-bold">R - Baileys</span>
+            </div>
+            <nav class="space-x-6">
+                <a href="/tutorial" class="hover:underline">Tutorial</a>
+                <a href="#" class="hover:underline">Blog</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="https://github.com" target="_blank" class="hover:underline">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.113.82-.263.82-.583 0-.287-.01-1.04-.016-2.042-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.755-1.333-1.755-1.09-.744.082-.729.082-.729 1.203.085 1.837 1.236 1.837 1.236 1.07 1.835 2.806 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.333-5.467-5.931 0-1.31.468-2.38 1.236-3.222-.124-.303-.536-1.524.116-3.176 0 0 1.008-.322 3.3 1.23a11.47 11.47 0 013.006-.404c1.02.005 2.048.138 3.006.404 2.29-1.553 3.296-1.23 3.296-1.23.654 1.653.242 2.874.118 3.176.77.842 1.234 1.913 1.234 3.222 0 4.608-2.806 5.624-5.478 5.921.43.372.814 1.102.814 2.22 0 1.605-.014 2.9-.014 3.292 0 .322.218.7.824.583C20.565 21.8 24 17.3 24 12c0-6.63-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://wa.me" target="_blank" class="hover:underline">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.52 3.478A11.937 11.937 0 0012 0C5.372 0 0 5.372 0 12c0 2.115.555 4.194 1.605 6.02L0 24l6.1-1.575A11.974 11.974 0 0012 24c6.628 0 12-5.372 12-12a11.94 11.94 0 00-3.48-8.522zm-8.467 19.02c-1.797 0-3.543-.472-5.075-1.363l-.364-.215-3.616.938.973-3.54-.236-.373A10.736 10.736 0 011.5 12c0-5.79 4.71-10.5 10.5-10.5 2.805 0 5.44 1.094 7.43 3.086A10.444 10.444 0 0122.5 12c0 5.79-4.71 10.5-10.5 10.5zm5.804-7.126c-.324-.163-1.924-.947-2.222-1.055-.298-.11-.516-.163-.734.162-.218.324-.844 1.054-1.035 1.272-.19.217-.381.243-.705.081-.324-.162-1.368-.505-2.605-1.61-.96-.855-1.609-1.91-1.798-2.233-.19-.324-.02-.504.143-.667.143-.143.324-.38.486-.572.162-.19.217-.324.324-.539.11-.217.054-.405-.027-.572-.081-.162-.734-1.772-1.007-2.431-.264-.635-.53-.545-.734-.553h-.626c-.19 0-.497.073-.76.36-.26.287-.997.974-.997 2.372s1.021 2.752 1.164 2.945c.143.19 2.013 3.072 4.878 4.31.682.296 1.215.472 1.629.605.684.217 1.307.186 1.798.113.547-.081 1.924-.785 2.197-1.543.27-.759.27-1.408.19-1.543-.081-.135-.297-.217-.62-.38z"/>
+                    </svg>
+                </a>
+                <button onclick="toggleTheme()" class="hover:underline">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.75a.75.75 0 01.75.75v1a.75.75 0 01-1.5 0v-1a.75.75 0 01.75-.75zm0 16a.75.75 0 01.75.75v1a.75.75 0 01-1.5 0v-1a.75.75 0 01.75-.75zm9.25-8.25h-1a.75.75 0 010-1.5h1a.75.75 0 010 1.5zm-16 0h-1a.75.75 0 010-1.5h1a.75.75 0 010 1.5zm11.096-5.096a.75.75 0 010 1.06l-.708.707a.75.75 0 01-1.061-1.06l.707-.708a.75.75 0 011.06 0zm-8.788 8.788a.75.75 0 010 1.06l-.708.707a.75.75 0 01-1.061-1.06l.707-.708a.75.75 0 011.06 0zm11.656 0a.75.75 0 010 1.06l-.707.707a.75.75 0 01-1.061-1.06l.708-.708a.75.75 0 011.06 0zm-8.788-8.788a.75.75 0 010 1.06l-.708.707a.75.75 0 01-1.061-1.06l.707-.708a.75.75 0 011.06 0zm5.392 4.096a3 3 0 11-6 0 3 3 0 016 0zm-1.5 0a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z"/>
+                    </svg>
+                </button>
+            </div>
+        </header>
+        <main class="flex flex-col items-center justify-center min-h-screen px-6 bg-opacity-75">
+            <h1 class="text-4xl font-bold mb-4 flex items-center text-black">
+                <img src="https://files.catbox.moe/8a686n.jpeg" alt="Logo" class="w-6 h-6 mr-2">R - Baileys
+          
+            </h1>
+            <p class="text-center text-lg mb-6 shadow-lg text-black dark:text-black" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">Baileys tidak memerlukan Selenium atau browser lain untuk terhubung dengan WhatsApp Web, cukup menggunakan WebSocket secara langsung.
+        </p>
+            <a href="https://www.npmjs.com/package/@rexxhayanasi/xhubscraper" class="bg-white text-green-600 py-2 px-6 rounded-lg shadow-md hover:bg-gray-100">
+                Gunakan @rexxhayanasi/xhubscraper - NPM <span>&#8987;</span>
+            </a>
+        </main>
+    </body>
+</html>
